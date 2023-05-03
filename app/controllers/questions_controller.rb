@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   
   # 質問の作成
   def new
-    @questions = Question.new
+    @question = Question.new
   end
   
   # 質問の登録
