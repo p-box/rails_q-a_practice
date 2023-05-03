@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
   
   # 質問の登録
   def create
+    p question_params
   end
   
   # 質問の編集
@@ -27,4 +28,11 @@ class QuestionsController < ApplicationController
   # 質問の削除
   def destroy
   end
+  
+  private
+  
+  def question_params
+    params.require(:question).permit(:title, :name, :content)
+  end
+  
 end
